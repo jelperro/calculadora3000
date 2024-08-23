@@ -1,5 +1,3 @@
-
-
 function calcular(){
     let res = document.getElementById('res');
     
