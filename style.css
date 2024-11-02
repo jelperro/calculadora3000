@@ -27,6 +27,19 @@ button {
     color: #333333;
 }
 
+.button2{
+    background-color: #333333;
+    color: #f4f4f4;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    padding-bottom: 2.5px;
+    font-size: 1.2rem;
+    margin-left: 5rem;
+    margin-bottom: 0.8rem;
+}
+
 #result{
     font-size: 4rem;
     text-align: center;
@@ -60,7 +73,7 @@ input {
     border: 2px, solid, #333333;
     border-radius: 15px;
     text-decoration: wavy ;
-    margin-left: 32.5rem;
+    margin-left: 38.5rem;
 }
 
 .inf{
