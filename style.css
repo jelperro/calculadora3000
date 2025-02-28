@@ -6,21 +6,61 @@
     display: inline-block;
 }
 
-.menu{
- margin-left: 0rem;
-
+#flecha{
+    display: inline;
+    font-size: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
-.menu-list{
+/* ------------------------- HEADER ------------------------- */
+.menu {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: #f4f4f4;
+}
+
+.menu-list {
     display: flex;
-    justify-content: space-between;
-    width: 29%;
-    font-size: 0.5rem;
+    justify-content: center;
+    gap: 2rem;
     list-style: none;
-    margin-left: 25rem;
-
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Permite que los ítems se apilen en móviles */
 }
-.textosmenu{
-    font-size: 1.8rem;
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: clamp(1.2rem, 2vw, 1.8rem); /* Tamaño responsive */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgba(51, 51, 51, 0.1);
+}
+
+/* Media Queries para el header */
+@media (max-width: 768px) {
+    .menu-list {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .menu a {
+        font-size: 1.4rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 .titulo{
     color: #333333;
@@ -39,7 +79,7 @@
 }
 
 #num1{
-    margin-left: 32%;
+    margin-left: 0%;
 }
 button {
     padding: 10px 20px;
@@ -50,7 +90,80 @@ button {
     padding-top: 60px;
     color: #333333;
 }
+/* CALCULADORA SIMPLE */
+.contenedor-operaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
 
+.input-operando {
+    width: 150px;
+    padding: 12px;
+    text-align: center;
+    order: 1; /* Posición izquierda */
+}
+
+.botones-operaciones {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    order: 2; /* Posición central */
+}
+
+#num2 {
+    order: 3; /* Posición derecha */
+}
+
+.contenedor-unidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.grupo-superior, .grupo-inferior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-operaciones {
+        flex-direction: column;
+    }
+    .button2{
+        margin-left: 36.5%;
+
+    }
+    article.grupo{
+        margin-left: 5%;
+    }
+    .titulo{
+        font-size: 3rem;
+    }
+    .subtitulo{
+        font-size: 1.5rem;
+    }
+    .input-operando, .botones-operaciones {
+        order: initial !important;
+    }
+    
+    .botones-operaciones button {
+        font-size: 1.8rem;
+        padding: 12px 18px;
+    }
+}
 .button2{
     background-color: #333333;
     color: #f4f4f4;
@@ -101,7 +214,9 @@ input {
     border: 2px, solid, #333333;
     border-radius: 15px;
     text-decoration: wavy ;
-    margin-left: 38.5rem;
+    display: grid;
+    margin-left: 43.5%;
+
 }
 
 .inf{
@@ -120,6 +235,9 @@ input {
 
 .grupo{
     margin-left: 39%;
+}
+.solucion{
+    font-size: 3rem;
 }
 
 *{

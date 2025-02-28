@@ -45,23 +45,33 @@
         <ul class="menu-list">
             <li><a class="textosmenu" href="./">Calculadora Simple</a></li>
             <li><a class="textosmenu" href="/porcentajes">Porcentajes</a></li>
+            <li><a class="textosmenu" href="/unidades">Unidades</a></li>
+
         </ul>   
     </nav>
 
 </header>
 <body>
+ <!-- Dentro del <body> -->
+<div class="calculadora-simple">
     <h1 class="titulo">Calculadora 3000</h1>
     <h2 class="subtitulo">Calculadora Simple</h2>
-   <input type="text" id="num1" class="inppeq" maxlength="5" placeholder="Escribe">
-   <button onclick="suma()">+</button>
-   <button onclick="resta()">-</button>
-   <button onclick="multiplicacion()">x</button>
-   <button onclick="division()">/</button>
-   <button onclick="sqrt()">√</button>
-   <input type="text" id="num2" class="inppeq" maxlength="5" placeholder="aquí">
-   
+    
+    <div class="contenedor-operaciones">
+        <input type="text" id="num1" class="input-operando" placeholder="Número 1">
+        
+        <div class="botones-operaciones">
+            <button onclick="suma()">+</button>
+            <button onclick="resta()">-</button>
+            <button onclick="multiplicacion()">×</button>
+            <button onclick="division()">÷</button>
+            <button onclick="sqrt()">√</button>
+        </div>
+        
+        <input type="text" id="num2" class="input-operando" placeholder="Número 2">
+    </div>
 
-<p id="result">___</p>
-
+    <p id="result">___</p>
+</div>
 </body>
 </html>
